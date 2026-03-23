@@ -22,29 +22,104 @@
   <main class="main">
 
     <section class="hero" id="inicio">
-      <h1 class="hero__title">
-        Explore coleções de jazz e música clássica em vinil
-      </h1>
-      <p class="hero__subtitle">curadas para quem ouve com alma</p>
-      <a class="btn btn--primary" href="#colecoes">Explorar →</a>
+
+      <div class="hero__images hero__images--left">
+        <article class="hero__img-card">
+          <img src="https://picsum.photos/id/91/220/260" alt="Disco de vinil — Jazz">
+        </article>
+        <article class="hero__img-card hero__img-card--offset">
+          <img src="https://picsum.photos/id/145/220/260" alt="Disco de vinil — Bossa Nova">
+        </article>
+      </div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Explore coleções de jazz e música clássica em vinil
+        </h1>
+        <p class="hero__subtitle">curadas para quem ouve com alma</p>
+        <a class="btn btn--primary" href="#colecoes">Explorar →</a>
+      </div>
+
+      <div class="hero__images hero__images--right">
+        <article class="hero__img-card">
+          <img src="https://picsum.photos/id/248/220/260" alt="Disco de vinil — Música Clássica">
+        </article>
+        <article class="hero__img-card hero__img-card--offset">
+          <img src="https://picsum.photos/id/305/220/260" alt="Disco de vinil — Orquestra">
+        </article>
+      </div>
+
     </section>
 
     <section class="section" id="colecoes">
-      <h2 class="section__title">Coleções em Destaque</h2>
-
+      <div class="section__header">
+        <h2 class="section__title">Coleções em Destaque</h2>
+      </div>
       <div class="cards-grid">
+
         <article class="card">
-          <h3 class="card__title">Jazz Essentials</h3>
-          <p class="card__meta">12 discos · Jazz</p>
+          <img class="card__cover" src="https://picsum.photos/id/392/400/250" alt="Jazz Essentials">
+          <div class="card__body">
+            <h3 class="card__title">Jazz Essentials</h3>
+            <p class="card__meta">12 discos · Jazz</p>
+            <p class="card__desc">Os álbuns fundamentais do jazz americano.</p>
+          </div>
         </article>
+
         <article class="card">
-          <h3 class="card__title">Bossa Nova Brasileira</h3>
-          <p class="card__meta">9 discos · Bossa Nova</p>
+          <img class="card__cover" src="https://picsum.photos/id/167/400/250" alt="Bossa Nova">
+          <div class="card__body">
+            <h3 class="card__title">Bossa Nova Brasileira</h3>
+            <p class="card__meta">9 discos · Bossa Nova</p>
+            <p class="card__desc">A poesia rítmica de João Gilberto e Tom Jobim.</p>
+          </div>
         </article>
+
         <article class="card">
-          <h3 class="card__title">Música Clássica</h3>
-          <p class="card__meta">15 discos · Clássico</p>
+          <img class="card__cover" src="https://picsum.photos/id/28/400/250" alt="Música Clássica">
+          <div class="card__body">
+            <h3 class="card__title">Música Clássica</h3>
+            <p class="card__meta">15 discos · Clássico</p>
+            <p class="card__desc">Bach, Beethoven e Mozart através das gerações.</p>
+          </div>
         </article>
+
+      </div>
+    </section>
+
+    <section class="section section--alt" id="musicas">
+      <div class="section__header">
+        <h2 class="section__title">Músicas</h2>
+      </div>
+      <div class="cards-grid">
+
+        <article class="card">
+          <img class="card__cover" src="https://picsum.photos/id/91/400/250" alt="So What">
+          <div class="card__body">
+            <h3 class="card__title">So What</h3>
+            <p class="card__meta">Miles Davis · 1959</p>
+            <p class="card__desc">Uma das faixas mais icônicas do cool jazz.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card__cover" src="https://picsum.photos/id/326/400/250" alt="A Love Supreme">
+          <div class="card__body">
+            <h3 class="card__title">A Love Supreme</h3>
+            <p class="card__meta">John Coltrane · 1964</p>
+            <p class="card__desc">Obra-prima espiritual de Coltrane.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card__cover" src="https://picsum.photos/id/305/400/250" alt="Goldberg Variations">
+          <div class="card__body">
+            <h3 class="card__title">Goldberg Variations</h3>
+            <p class="card__meta">Bach / Glenn Gould · 1955</p>
+            <p class="card__desc">Interpretação histórica de Glenn Gould.</p>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -53,7 +128,13 @@
   <footer class="site-footer">
     <div class="footer__inner">
       <p class="footer__brand">VynilVault</p>
-      <p class="footer__copy">© 2025 VynilVault</p>
+      <nav class="footer__nav">
+        <a href="#inicio">Home</a>
+        <a href="#colecoes">Coleções</a>
+        <a href="#musicas">Músicas</a>
+        <a href="#newsletter">Newsletter</a>
+      </nav>
+      <p class="footer__copy">© 2025 VynilVault — Projeto Acadêmico</p>
     </div>
   </footer>
 
