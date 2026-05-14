@@ -1,0 +1,242 @@
+/* ============================================================
+   VynilVault — detalhes.css
+   Estilos exclusivos da página de detalhes (detalhes.html)
+   e pequenos complementos para os cards da home-page.
+   ============================================================ */
+
+/* ── Botão nos cards da home-page */
+.card__btn {
+  display: inline-block;
+  margin-top: 1.1rem;
+  font-size: 0.72rem;
+  padding: 0.6rem 1.4rem;
+}
+
+/* Contador de álbuns na seção */
+.section__count {
+  font-family: var(--ff-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}
+
+/* ── Estado de carregamento / erro */
+.detalhe__carregando,
+.detalhe__erro {
+  text-align: center;
+  padding: 6rem 2rem;
+  color: var(--text-muted);
+  font-family: var(--ff-body);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.detalhe__erro .btn {
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+/* ── Container principal dos detalhes */
+.detalhe {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+}
+
+/* ── Link "Voltar" */
+.detalhe__voltar {
+  display: inline-block;        
+  font-family: var(--ff-ui);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 2rem 0 0;            
+  margin-bottom: 2.5rem;        
+  transition: color var(--transition);
+}
+.detalhe__voltar:hover { color: var(--gold); }
+
+/* ── Topo: capa + informações */
+.detalhe__topo {
+  display: grid;                 
+  grid-template-columns: 340px 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 4rem;           
+  padding-bottom: 3rem;         
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Imagem da capa */
+.detalhe__capa-wrap {
+  position: relative;           
+}
+
+.detalhe__capa {
+  display: block;                
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(201, 168, 76, 0.08);
+}
+
+/* Sombra decorativa "disco" abaixo da capa */
+.detalhe__vinyl-shadow {
+  position: absolute;           
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 30px;
+  background: radial-gradient(ellipse at center, rgba(201,168,76,0.18) 0%, transparent 70%);
+  filter: blur(8px);
+  z-index: -1;
+}
+
+/* ── Bloco de informações*/
+.detalhe__genero {
+  display: inline-block;         
+  font-family: var(--ff-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  border-radius: 2px;
+  padding: 0.25rem 0.75rem;      
+  margin-bottom: 1.2rem;        
+}
+
+.detalhe__titulo {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;        
+  color: var(--text-primary);
+}
+
+.detalhe__artista {
+  font-family: var(--ff-body);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--gold-light);
+  font-weight: 300;
+  margin-bottom: 2rem;           
+}
+
+/* ── Lista de metadados */
+.detalhe__meta-lista {
+  list-style: none;
+  margin: 0 0 2rem;              
+  padding: 0;                  
+  display: flex;                 
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.detalhe__meta-lista li {
+  display: flex;                
+  align-items: baseline;
+  gap: 1rem;
+  font-family: var(--ff-ui);
+  font-size: 0.78rem;
+}
+
+.meta__label {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  min-width: 80px;               
+}
+
+.meta__valor {
+  color: var(--text-muted);
+}
+
+/* ── Descrição resumida  */
+.detalhe__descricao {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.7;
+  padding-left: 1rem;            
+  border-left: 2px solid var(--gold-dim);
+}
+
+/* ── Corpo: resenha + faixas */
+.detalhe__corpo {
+  display: grid;                 /* display */
+  grid-template-columns: 1fr 300px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.detalhe__subtitulo {
+  font-family: var(--ff-display);
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;        /* box-model: margin */
+  padding-bottom: 0.6rem;       /* box-model: padding */
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.detalhe__conteudo {
+  font-family: var(--ff-body);
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.85;
+}
+
+/* ── Lista de faixas */
+.tracklist {
+  list-style: none;
+  margin: 0;                     
+  padding: 0;                    
+  counter-reset: track;
+}
+
+.tracklist__item {
+  counter-increment: track;
+  display: flex;                 
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--ff-body);
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  padding: 0.75rem 0;            
+  border-bottom: 1px solid var(--border);
+  transition: color var(--transition);
+}
+
+/* Número da faixa gerado por CSS counter */
+.tracklist__item::before {
+  content: counter(track, decimal-leading-zero);
+  font-family: var(--ff-ui);
+  font-size: 0.68rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.08em;
+  min-width: 1.8rem;
+}
+
+.tracklist__item:hover { color: var(--gold-light); }
+
+/* ── Responsividade ─────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .detalhe__topo  { grid-template-columns: 1fr; gap: 2.5rem; }
+  .detalhe__corpo { grid-template-columns: 1fr; gap: 2.5rem; }
+
+  .detalhe__capa-wrap { max-width: 320px; margin: 0 auto; }
+}
+
+@media (max-width: 600px) {
+  .detalhe { padding: 0 1rem 4rem; }
+  .detalhe__titulo { font-size: 2rem; }
+}

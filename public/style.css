@@ -233,7 +233,7 @@ a:hover { color: var(--gold-light); }
   font-size: 2rem;
 }
 
-/* ── GRADE DE CARDS ─────────────────────────────────────────── */
+/* ── GRADE DE CARDS*/
 .cards-grid {
   display: grid; /* display */
   grid-template-columns: repeat(3, 1fr);

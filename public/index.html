@@ -13,11 +13,10 @@
 
   <header class="site-header">
     <nav class="nav" aria-label="Navegação principal">
-      <a class="nav__logo" href="#">VynilVault</a>
+      <a class="nav__logo" href="index.html">VynilVault</a>
       <ul class="nav__links">
         <li><a href="#inicio">Home</a></li>
-        <li><a href="#colecoes">Coleções</a></li>
-        <li><a href="#musicas">Músicas</a></li>
+        <li><a href="#albums">Álbuns</a></li>
         <li><a href="#newsletter">Newsletter</a></li>
       </ul>
     </nav>
@@ -28,175 +27,56 @@
     <!-- ── HERO ── -->
     <section class="hero" id="inicio" aria-labelledby="hero-heading">
 
-      <!-- Imagens decorativas — lado esquerdo -->
       <div class="hero__images hero__images--left">
         <article class="hero__img-card">
-          <img
-            src="https://picsum.photos/id/91/220/260"
-            alt="Disco de vinil — Jazz"
-          >
+          <img src="https://picsum.photos/id/91/220/260" alt="Disco de vinil — Jazz">
         </article>
         <article class="hero__img-card hero__img-card--offset">
-          <img
-            src="https://picsum.photos/id/145/220/260"
-            alt="Disco de vinil — Bossa Nova"
-          >
+          <img src="https://picsum.photos/id/145/220/260" alt="Disco de vinil — Bossa Nova">
         </article>
       </div>
 
-      <!-- Texto e botão centrais -->
       <div class="hero__content">
         <h1 class="hero__title" id="hero-heading">
           Explore coleções de jazz e música clássica em vinil
         </h1>
         <p class="hero__subtitle">curadas para quem ouve com alma</p>
-        <a class="btn btn--primary" href="#colecoes">Explorar →</a>
+        <a class="btn btn--primary" href="#albums">Explorar →</a>
       </div>
 
-      <!-- Imagens decorativas — lado direito -->
       <div class="hero__images hero__images--right">
         <article class="hero__img-card">
-          <img
-            src="https://picsum.photos/id/248/220/260"
-            alt="Disco de vinil — Música Clássica"
-          >
+          <img src="https://picsum.photos/id/248/220/260" alt="Disco de vinil — Música Clássica">
         </article>
         <article class="hero__img-card hero__img-card--offset">
-          <img
-            src="https://picsum.photos/id/305/220/260"
-            alt="Disco de vinil — Orquestra"
-          >
+          <img src="https://picsum.photos/id/305/220/260" alt="Disco de vinil — Orquestra">
         </article>
       </div>
 
     </section>
 
-    <!-- ── COLEÇÕES ── -->
-    <section class="section" id="colecoes" aria-labelledby="colecoes-heading">
+    <!-- ── ÁLBUNS (gerado dinamicamente pelo app.js) ── -->
+    <section class="section" id="albums" aria-labelledby="albums-heading">
       <div class="section__header">
-        <h2 class="section__title" id="colecoes-heading">Coleções em Destaque</h2>
+        <h2 class="section__title" id="albums-heading">Álbuns do Acervo</h2>
+        <span class="section__count" id="albums-count"></span>
       </div>
 
-      <div class="cards-grid">
-
-        <article class="card">
-          <img
-            class="card__cover"
-            src="https://picsum.photos/id/392/400/250"
-            alt="Coleção Jazz Essentials"
-          >
-          <div class="card__body">
-            <h3 class="card__title">Jazz Essentials</h3>
-            <p class="card__meta">12 discos · Jazz</p>
-            <p class="card__desc">
-              Os álbuns fundamentais do jazz americano,
-              de Miles Davis a John Coltrane.
-            </p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img
-            class="card__cover"
-            src="https://picsum.photos/id/167/400/250"
-            alt="Coleção Bossa Nova Brasileira"
-          >
-          <div class="card__body">
-            <h3 class="card__title">Bossa Nova Brasileira</h3>
-            <p class="card__meta">9 discos · Bossa Nova</p>
-            <p class="card__desc">
-              A poesia rítmica de João Gilberto e Tom Jobim
-              direto do Rio de Janeiro.
-            </p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img
-            class="card__cover"
-            src="https://picsum.photos/id/28/400/250"
-            alt="Coleção Música Clássica"
-          >
-          <div class="card__body">
-            <h3 class="card__title">Música Clássica</h3>
-            <p class="card__meta">15 discos · Clássico</p>
-            <p class="card__desc">
-              Bach, Beethoven e Mozart em interpretações
-              que atravessaram gerações.
-            </p>
-          </div>
-        </article>
-
+      <!--
+        #albums-grid é o alvo do renderCards() em app.js.
+        O JavaScript monta os cards aqui ao carregar a página.
+      -->
+      <div class="cards-grid" id="albums-grid">
+        <!-- os cards são inseridos aqui pelo app.js -->
       </div>
     </section>
 
-    <!-- ── MÚSICAS ── -->
-    <section class="section section--alt" id="musicas" aria-labelledby="musicas-heading">
-      <div class="section__header">
-        <h2 class="section__title" id="musicas-heading">Músicas</h2>
-      </div>
-
-      <div class="cards-grid">
-
-        <article class="card">
-          <img
-            class="card__cover"
-            src="https://picsum.photos/id/91/400/250"
-            alt="So What — Miles Davis"
-          >
-          <div class="card__body">
-            <h3 class="card__title">So What</h3>
-            <p class="card__meta">Miles Davis · 1959</p>
-            <p class="card__desc">
-              Uma das faixas mais icônicas do cool jazz,
-              do álbum Kind of Blue.
-            </p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img
-            class="card__cover"
-            src="https://picsum.photos/id/326/400/250"
-            alt="A Love Supreme — John Coltrane"
-          >
-          <div class="card__body">
-            <h3 class="card__title">A Love Supreme</h3>
-            <p class="card__meta">John Coltrane · 1964</p>
-            <p class="card__desc">
-              Obra-prima espiritual de Coltrane,
-              considerada um dos maiores álbuns de jazz.
-            </p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img
-            class="card__cover"
-            src="https://picsum.photos/id/305/400/250"
-            alt="Goldberg Variations — Bach"
-          >
-          <div class="card__body">
-            <h3 class="card__title">Goldberg Variations</h3>
-            <p class="card__meta">Bach / Glenn Gould · 1955</p>
-            <p class="card__desc">
-              Interpretação histórica de Glenn Gould que
-              redefiniu o cânone da música clássica.
-            </p>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ── NEWSLETTER (FORMULÁRIO) ── -->
-    <section class="section" id="newsletter" aria-labelledby="newsletter-heading">
+    <!-- ── NEWSLETTER ── -->
+    <section class="section section--alt" id="newsletter" aria-labelledby="newsletter-heading">
       <div class="newsletter">
 
         <div class="newsletter__text">
-          <h2 class="newsletter__title" id="newsletter-heading">
-            Fique por dentro
-          </h2>
+          <h2 class="newsletter__title" id="newsletter-heading">Fique por dentro</h2>
           <p class="newsletter__desc">
             Receba curadoria semanal com novidades do acervo
             e curiosidades sobre jazz e música clássica.
@@ -207,26 +87,14 @@
 
           <div class="form-group">
             <label class="form-label" for="nome">Nome</label>
-            <input
-              class="form-input"
-              type="text"
-              id="nome"
-              name="nome"
-              placeholder="Seu nome completo"
-              required
-            >
+            <input class="form-input" type="text" id="nome" name="nome"
+              placeholder="Seu nome completo" required>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="email">E-mail</label>
-            <input
-              class="form-input"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="seu@email.com"
-              required
-            >
+            <input class="form-input" type="email" id="email" name="email"
+              placeholder="seu@email.com" required>
           </div>
 
           <div class="form-group">
@@ -239,9 +107,7 @@
             </select>
           </div>
 
-          <button class="btn btn--primary" type="submit">
-            Inscrever-se
-          </button>
+          <button class="btn btn--primary" type="submit">Inscrever-se</button>
 
         </form>
       </div>
@@ -249,21 +115,23 @@
 
   </main>
 
-  <!-- ========================================================
-       FOOTER — rodapé com links e copyright
-  ========================================================= -->
   <footer class="site-footer">
     <div class="footer__inner">
       <p class="footer__brand">VynilVault</p>
       <nav class="footer__nav" aria-label="Links do rodapé">
         <a href="#inicio">Home</a>
-        <a href="#colecoes">Coleções</a>
-        <a href="#musicas">Músicas</a>
+        <a href="#albums">Álbuns</a>
         <a href="#newsletter">Newsletter</a>
       </nav>
       <p class="footer__copy">© 2025 VynilVault — Projeto Acadêmico</p>
     </div>
   </footer>
+
+  <!--
+    app.js carregado no final do body para garantir que o DOM
+    já esteja disponível quando o script executar.
+  -->
+  <script src="app.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- O título é atualizado dinamicamente pelo app.js -->
+  <title>VynilVault — Detalhes do Álbum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="detalhes.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="nav__logo" href="index.html">VynilVault</a>
+      <ul class="nav__links">
+        <li><a href="index.html#inicio">Home</a></li>
+        <li><a href="index.html#albums">Álbuns</a></li>
+        <li><a href="index.html#newsletter">Newsletter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!--
+      #detalhe-container é o alvo do renderDetalhes() em app.js.
+      Todo o conteúdo da página é montado aqui via JavaScript,
+      com base no parâmetro "id" lido da query string da URL.
+
+      Exemplo de URL:  detalhes.html?id=2
+    -->
+    <section class="section" id="detalhe-container" aria-label="Detalhes do álbum">
+      <!-- Conteúdo injetado pelo app.js -->
+
+      <!-- Estado de carregamento exibido antes do JS executar -->
+      <p class="detalhe__carregando">Carregando álbum…</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer__inner">
+      <p class="footer__brand">VynilVault</p>
+      <nav class="footer__nav" aria-label="Links do rodapé">
+        <a href="index.html#inicio">Home</a>
+        <a href="index.html#albums">Álbuns</a>
+        <a href="index.html#newsletter">Newsletter</a>
+      </nav>
+      <p class="footer__copy">© 2025 VynilVault — Projeto Acadêmico</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
